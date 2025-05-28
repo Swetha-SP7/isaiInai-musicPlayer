@@ -1,0 +1,288 @@
+.playerControls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-player);
+  background: var(--glass-gradient);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-md) var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.songInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-width: 0;
+}
+
+.albumCover {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--accent-bg);
+  flex-shrink: 0;
+}
+
+.trackInfo {
+  min-width: 0;
+  flex: 1;
+}
+
+.trackTitle {
+  color: var(--primary-text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackArtist {
+  color: var(--secondary-text);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.controlButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.controlBtn {
+  background: none;
+  border: none;
+  color: var(--secondary-text);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlBtn:hover {
+  color: var(--primary-text);
+  background: var(--glass-bg);
+}
+
+.controlBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.playPauseBtn {
+  background: var(--primary-gradient);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-md);
+}
+
+.playPauseBtn:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+  color: white;
+  background: var(--accent-hover);
+}
+
+.progressSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 500px;
+}
+
+.timeDisplay {
+  color: var(--secondary-text);
+  font-size: 0.8rem;
+  min-width: 35px;
+  text-align: center;
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background: var(--accent-bg);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: 3px;
+  transition: width 0.1s ease;
+  position: relative;
+}
+
+.progressFill::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  box-shadow: var(--shadow-md);
+}
+
+.progressBar:hover .progressFill::after {
+  opacity: 1;
+}
+
+.volumeControls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  justify-self: end;
+}
+
+.favoriteBtn {
+  background: none;
+  border: none;
+  color: var(--secondary-text);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favoriteBtn:hover {
+  color: var(--primary-text);
+  background: var(--glass-bg);
+}
+
+.favoriteBtn.active {
+  color: var(--error-color);
+}
+
+.volumeSlider {
+  width: 100px;
+  height: 4px;
+  background: var(--accent-bg);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.placeholder {
+  color: var(--secondary-text);
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  .songInfo {
+    justify-content: center;
+  }
+
+  .volumeControls {
+    justify-self: center;
+  }
+
+  .volumeSlider {
+    width: 80px;
+  }
+
+  .progressSection {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .playerControls {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .albumCover {
+    width: 50px;
+    height: 50px;
+  }
+
+  .controlButtons {
+    gap: var(--spacing-sm);
+  }
+
+  .playPauseBtn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .progressSection {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .volumeControls {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Ninaithu Ninaithu",
+      "artist": "Yuvan Shankar Raja,Shreya Goshal",
+      "duration": 274,
+      "cover": "/assets/images/ninaithu.png",
+      "audio": "/assets/audio/Ninaithu.mp3",
+      "playlistId": 4
+    },
+    {
+      "id": 2,
+      "title": "Otha sollala",
+      "artist": "G.V.prakash,Velmurugan",
+      "duration": 359,
+      "cover": "/assets/images/aadukalam.png",
+      "audio": "/assets/audio/Otha.mp3",
+      "playlistId": 1
+    },
+    {
+      "id": 3,
+      "title": "Aaruyire",
+      "artist": "A.R.Rahman,Chinmayi",
+      "duration": 310,
+      "cover": "/assets/images/guru.png",
+      "audio": "/assets/audio/Aaruyire.mp3",
+      "playlistId": 2
+    },
+    {
+      "id": 4,
+      "title": "Unakaagathaane indha",
+      "artist": "Yuvan Shankar Raja,Na.Muthukumar",
+      "duration": 291,
+      "cover": "/assets/images/kattradhutamizh.png",
+      "audio": "/assets/audio/Unakagathanae.mp3",
+      "playlistId": 4
+    },
+    {
+      "id": 5,
+      "title": "Mazhai Vara Pogudhae",
+      "artist": "Harris Jayaraj,Karthik",
+      "duration": 342,
+      "cover": "/assets/images/mazhaivara.png",
+      "audio": "/assets/audio/Mazhai.mp3",
+      "playlistId": 3
+    },
+    {
+      "id": 6,
+      "title": "Moongil Thottam",
+      "artist": "A.R.Rahman,Abhay,Harini",
+      "duration": 275,
+      "cover": "/assets/images/moongil.png",
+      "audio": "/assets/audio/Moongil.mp3",
+      "playlistId": 2
+    },
+    {
+      "id": 7,
+      "title": "Going Thru Emotions",
+      "artist": "Yuvan Shankar Raja",
+      "duration": 172,
+      "cover": "/assets/images/pudupettai.png",
+      "audio": "/assets/audio/going.mp3",
+      "playlistId": 4
+    },
+    {
+      "id": 8,
+      "title": "Saadda Haq",
+      "artist": "A.R.Rahman,Mohit Chauhan",
+      "duration": 365,
+      "cover": "/assets/images/rockstar.png",
+      "audio": "/assets/audio/Saadda.mp3",
+      "playlistId": 2
+    },
+    {
+      "id": 9,
+      "title": "Sarattu Vandiyila",
+      "artist": "A.R.Rahman,A.R.Reihana",
+      "duration": 289,
+      "cover": "/assets/images/sarattu.png",
+      "audio": "/assets/audio/Saaratt.mp3",
+      "playlistId": 2
+    },
+    {
+      "id": 10,
+      "title": "Nenjukkul peidhidum",
+      "artist": "Harris Jayaraj,Haricharan",
+      "duration": 371,
+      "cover": "/assets/images/vaaranamaayiram.png",
+      "audio": "/assets/audio/Nenjukkul.mp3",
+      "playlistId": 3
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "name": "Daily Mix",
+      "description": "Based on your daily activity",
+      "cover": "/assets/images/daily.jpg",
+      "songIds": [10,4,5,2,6,3]
+    },
+    {
+      "id": 2,
+      "name": "Rahman Rulling 00s",
+      "description": "Relaxing songs for peaceful moments",
+      "cover": "/assets/images/arrahman.jpg",
+      "songIds": [3,6,8,9]
+    },
+    {
+      "id": 3,
+      "name": "Evergreen Harris",
+      "description": "High-energy tracks to pump you up",
+      "cover": "/assets/images/harris.jpg",
+      "songIds": [5,10]
+    },
+    {
+      "id": 4,
+      "name": "Yuvan Drugs",
+      "description": "Songs that makes you feel addictive",
+      "cover": "/assets/images/yuvan.jpg",
+      "songIds": [1,4,7]
+    }
+  ]
+}
